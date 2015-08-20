@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290749A51B84A17100BB04C3 /* hex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29D8DBDF1B7E1A49008A1585 /* hex.cpp */; };
+		290749A61B84A17100BB04C3 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29D8DBD01B7E1A49008A1585 /* base64.cpp */; };
+		290749A71B84A17100BB04C3 /* bson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29D8DBD31B7E1A49008A1585 /* bson.cpp */; };
+		290749A81B84A17100BB04C3 /* parse_number.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29D8DBE51B7E1A49008A1585 /* parse_number.cpp */; };
+		290749A91B84A17100BB04C3 /* time_support.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29D8DBEC1B7E1A49008A1585 /* time_support.cpp */; };
+		290749AA1B84A17100BB04C3 /* json.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29D8DBE11B7E1A49008A1585 /* json.cpp */; };
 		29D8DBEF1B7E1A49008A1585 /* base64.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29D8DBD01B7E1A49008A1585 /* base64.cpp */; };
 		29D8DBF01B7E1A49008A1585 /* bson.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29D8DBD31B7E1A49008A1585 /* bson.cpp */; };
 		29D8DBF11B7E1A49008A1585 /* hex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 29D8DBDF1B7E1A49008A1585 /* hex.cpp */; };
@@ -16,6 +22,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		290749AC1B84A17100BB04C3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29D8DBB11B7E19CB008A1585 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -28,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		290749B01B84A17100BB04C3 /* libbson_osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libbson_osx.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D8DBB31B7E19CB008A1585 /* libbson.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libbson.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D8DBCF1B7E1A49008A1585 /* base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base.h; sourceTree = "<group>"; };
 		29D8DBD01B7E1A49008A1585 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = base64.cpp; sourceTree = "<group>"; };
@@ -63,6 +79,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		290749AB1B84A17100BB04C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29D8DBB01B7E19CB008A1585 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				29D8DBB31B7E19CB008A1585 /* libbson.a */,
+				290749B01B84A17100BB04C3 /* libbson_osx.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,9 +163,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		29D8DBB21B7E19CB008A1585 /* bson */ = {
+		290749A31B84A17100BB04C3 /* bson_osx */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 29D8DBC71B7E19CB008A1585 /* Build configuration list for PBXNativeTarget "bson" */;
+			buildConfigurationList = 290749AD1B84A17100BB04C3 /* Build configuration list for PBXNativeTarget "bson_osx" */;
+			buildPhases = (
+				290749A41B84A17100BB04C3 /* Sources */,
+				290749AB1B84A17100BB04C3 /* Frameworks */,
+				290749AC1B84A17100BB04C3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bson_osx;
+			productName = bson;
+			productReference = 290749B01B84A17100BB04C3 /* libbson_osx.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		29D8DBB21B7E19CB008A1585 /* bson_ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29D8DBC71B7E19CB008A1585 /* Build configuration list for PBXNativeTarget "bson_ios" */;
 			buildPhases = (
 				29D8DBAF1B7E19CB008A1585 /* Sources */,
 				29D8DBB01B7E19CB008A1585 /* Frameworks */,
@@ -151,7 +192,7 @@
 			);
 			dependencies = (
 			);
-			name = bson;
+			name = bson_ios;
 			productName = bson;
 			productReference = 29D8DBB31B7E19CB008A1585 /* libbson.a */;
 			productType = "com.apple.product-type.library.static";
@@ -182,12 +223,26 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				29D8DBB21B7E19CB008A1585 /* bson */,
+				29D8DBB21B7E19CB008A1585 /* bson_ios */,
+				290749A31B84A17100BB04C3 /* bson_osx */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		290749A41B84A17100BB04C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				290749A51B84A17100BB04C3 /* hex.cpp in Sources */,
+				290749A61B84A17100BB04C3 /* base64.cpp in Sources */,
+				290749A71B84A17100BB04C3 /* bson.cpp in Sources */,
+				290749A81B84A17100BB04C3 /* parse_number.cpp in Sources */,
+				290749A91B84A17100BB04C3 /* time_support.cpp in Sources */,
+				290749AA1B84A17100BB04C3 /* json.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		29D8DBAF1B7E19CB008A1585 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -204,6 +259,26 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		290749AE1B84A17100BB04C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = bson_osx;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		290749AF1B84A17100BB04C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = bson_osx;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		29D8DBC51B7E19CB008A1585 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -305,6 +380,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		290749AD1B84A17100BB04C3 /* Build configuration list for PBXNativeTarget "bson_osx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				290749AE1B84A17100BB04C3 /* Debug */,
+				290749AF1B84A17100BB04C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		29D8DBAE1B7E19CB008A1585 /* Build configuration list for PBXProject "bson" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -314,7 +398,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		29D8DBC71B7E19CB008A1585 /* Build configuration list for PBXNativeTarget "bson" */ = {
+		29D8DBC71B7E19CB008A1585 /* Build configuration list for PBXNativeTarget "bson_ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				29D8DBC81B7E19CB008A1585 /* Debug */,

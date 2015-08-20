@@ -24,6 +24,7 @@
 #include <limits>
 #include "float_utils.h"
 #include "hex.h"
+#include "bsonobjiterator.h"
 
 namespace _bson {
 
@@ -63,6 +64,11 @@ namespace _bson {
         ss << "invalid parameter: expected an object (" << fieldName() << ")";
         uasserted( 10065 , ss.str() );
         return bsonobj(); // never reachable
+    }
+
+    inline bsonobj bsonelement::Obj() const
+    {
+        return embeddedObjectUserCheck();
     }
 
     inline bsonobj bsonelement::object() const {
@@ -110,6 +116,24 @@ namespace _bson {
         StringBuilder s;
         toString(s, isArray, full);
         return s.str();
+    }
+
+    inline void bsonobj::elems(std::vector<bsonelement> & v) const
+    {
+        bsonobjiterator i(*this);
+        while (i.more())
+        {
+            v.push_back(i.next());
+        }
+    }
+
+    inline void bsonobj::elems(std::list<bsonelement> &v) const
+    {
+        bsonobjiterator i(*this);
+        while (i.more())
+        {
+            v.push_back(i.next());
+        }
     }
 
 }
