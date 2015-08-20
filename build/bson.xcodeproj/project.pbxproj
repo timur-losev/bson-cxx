@@ -44,7 +44,7 @@
 
 /* Begin PBXFileReference section */
 		290749B01B84A17100BB04C3 /* libbson_osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libbson_osx.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		29D8DBB31B7E19CB008A1585 /* libbson.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libbson.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		29D8DBB31B7E19CB008A1585 /* libbson_ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libbson_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D8DBCF1B7E1A49008A1585 /* base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base.h; sourceTree = "<group>"; };
 		29D8DBD01B7E1A49008A1585 /* base64.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = base64.cpp; sourceTree = "<group>"; };
 		29D8DBD11B7E1A49008A1585 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		29D8DBB41B7E19CB008A1585 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				29D8DBB31B7E19CB008A1585 /* libbson.a */,
+				29D8DBB31B7E19CB008A1585 /* libbson_ios.a */,
 				290749B01B84A17100BB04C3 /* libbson_osx.a */,
 			);
 			name = Products;
@@ -194,7 +194,7 @@
 			);
 			name = bson_ios;
 			productName = bson;
-			productReference = 29D8DBB31B7E19CB008A1585 /* libbson.a */;
+			productReference = 29D8DBB31B7E19CB008A1585 /* libbson_ios.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
