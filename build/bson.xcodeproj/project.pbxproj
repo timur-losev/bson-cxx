@@ -262,6 +262,7 @@
 		290749AE1B84A17100BB04C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = bson_osx;
 				SDKROOT = macosx;
@@ -272,6 +273,7 @@
 		290749AF1B84A17100BB04C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = bson_osx;
 				SDKROOT = macosx;
