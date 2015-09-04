@@ -110,7 +110,8 @@ namespace _bson {
         return bsonobjiterator(s, e);
     }
 
-    inline int bsonelement::size() const {
+    int bsonelement::size() const
+    {
         if (totalSize >= 0)
             return totalSize;
         int x = _valuesize();

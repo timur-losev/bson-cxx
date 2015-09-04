@@ -109,7 +109,7 @@ namespace _bson {
 
         std::string toString( bool includeFieldName = true, bool full=false) const;
         void toString(StringBuilder& s, bool includeFieldName = true, bool full=false, int depth=0) const;
-        std::string jsonString( JsonStringFormat format, bool includeFieldNames = true, int pretty = 0 ) const;
+        std::string jsonString( JsonStringFormat format, bool includeFieldNames = true, int pretty = 0 ) const; //TODO
         operator std::string() const { return toString(); }
 
         /** Returns the type of the element */
