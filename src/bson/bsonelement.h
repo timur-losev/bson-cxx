@@ -76,6 +76,9 @@ namespace _bson {
         double Double()             const { return chk(NumberDouble)._numberDouble(); }
         long long Long()            const { return chk(NumberLong)._numberLong(); }
         int Int()                   const { return chk(NumberInt)._numberInt(); }
+
+        uint32_t UInt()             const { return static_cast<uint32_t>(chk(NumberLong)._numberLong()); }
+
         bool Bool()                 const { return chk(_bson::Bool).boolean(); }
         std::vector<bsonelement> Array() const; // see implementation for detailed comments
         _bson::OID OID()            const { return chk(jstOID).__oid(); }
